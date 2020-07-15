@@ -1,0 +1,8 @@
+MIDlet-1: IVO, IVO.png, IVO
+MIDlet-Jar-Size: 11339
+MIDlet-Jar-URL: https://github.com/KedalionDaimon/1V0/upload/master/IVO.jar
+MIDlet-Name: IVO
+MIDlet-Vendor: Unknown
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

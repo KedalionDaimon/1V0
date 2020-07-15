@@ -1,0 +1,8 @@
+MIDlet-1: IVOnano, IVOnano.png, IVOnano
+MIDlet-Jar-Size: 7525
+MIDlet-Jar-URL: https://github.com/KedalionDaimon/1V0/upload/master/IVOnano.jar
+MIDlet-Name: IVOnano
+MIDlet-Vendor: Unknown
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-1.0
