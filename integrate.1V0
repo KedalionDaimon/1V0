@@ -1,0 +1,124 @@
+24.7.2020
+
+Compute the integral of 2x^2 - x^3 within the range 0 and 2.
+
+The algorithm used essentially entails setting a temporary variable to the lower range, increasing it repeatedly by a step towards the upper range, computing from this value the function value, adding up the function values until the upper range has been reached, and outputting the sum to data address 1.
+
+
+
+Used data positions:
+
+The result will be given under data address 1.
+
+Data address 2 (user-set) will contain the lower bound of the computation.
+
+Data address 3 (user-set) will contain the upper bound.
+
+Data address 4 (user-set) will contain the step size.
+
+Data address 5 (automatic) will contain the step-wise increased x-coordinate.
+
+Data address 6 (automatic) will contain a copy of the upper bound, to check has it been reached.
+
+Data address 7 (automatic) serves to accumulate the size of y-values as the x-values advance.
+
+Data address 8 (automatic) contains the "previous" y-value.
+
+Data address 9 (automatic) contains the "next" y-value. Data address 8 and 9 are used for interpolation.
+
+Data address 10 (automatic) is used as a temporary variable to compute the y-value.
+
+Data address 11 (user-set) will contain the number 2, used for interpolation and for the function-part 2x^2.
+
+Hence,
+
+-4: enter data within the addresses 2 till 4, as such:
+
+2: 0
+3: 2
+4: 0.01
+
+-4: enter data within the data address 11 till 11, as such:
+
+11: 2
+
+
+
+Instructions:
+
+As instructions, enter these, meaning
+
+command address, operation, first data address, second data address:
+
+21, 6, 5, 2
+load the stepper with 0
+
+22, 9, 5, 4
+add a step to the x-stepper
+
+23, 6, 8, 9
+BEGIN polynomial computation section. Set data address 8 to the "already contained" next value of y.
+
+24, 6, 9, 5
+set data address 9 to the x-stepper
+
+25, 6, 10, 5
+set data address 10 to the x-stepper
+
+26, 11, 9, 9
+make data address 9 contain x^2
+
+27, 11, 9, 11
+make data address 9 contain 2x^2
+
+28, 11, 10, 10
+make data address 10 contain x^2
+
+29, 11, 10, 5
+make data address 10 contain x^3
+
+30, 10, 9, 10
+make data address 9 contain 2x^2 - x^3
+
+31, 9, 8, 9
+make data address 8 contain the addition of the "previous" and the "next" y-value
+
+32, 12, 8, 11
+halve that previous sum (achieving interpolation between these two values)
+
+33, 9, 7, 8
+Add that value to the x-stepper 7 which accumulates the sum so far. END polynomial computation section.
+
+34, 6, 6, 3
+set data address 6 to the upper range limit in order to decide is the range done
+
+35, 10, 6, 5
+subtract from the upper range limit the present state of the x-stepper
+
+36, 1, 6, 38
+if the result of the subtraction is 0, the range is over and we jump to finalising everything
+
+37, 1, 0, 22
+otherwise, jump unconditionally to the beginning of the repeated computation cycle
+
+38, 6, 1, 7
+set data address 1 to the intermediate accumulator of y-values
+
+39, 11, 1, 4
+multiply the accumulated sum by the step-size to get the correct final sum
+
+40, 1, 0, 2000
+unconditional jump to the end of the execution space, quickly ending the program
+for the ATTiny85, make it e.g. "43" instead of "2000" in the last number
+
+
+Trigger the program launch by giving the instruction:
+
+0, 1, 0, 21
+
+Examine the result by checking -2 from 1 till 1.
+
+(I am getting 1.3333012 on my phone, which is a decent approximation of 1.33...)
+
+
+
