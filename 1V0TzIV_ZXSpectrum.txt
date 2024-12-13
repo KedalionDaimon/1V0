@@ -240,3 +240,5 @@ DIVN -- 60: Divide each element of a range by a number
 Using z88dk, the Spectrum version of the system may be compiled with a command line akin to the following, tested on Windows 11 and Ubuntu Linux 22.04:
 
 zcc +zx -clib=new -create-app 1V0TzIV600zx_20241211b.c -o ivo -create-app
+
+There is presently no facility to save any files, including written programs, and these are to be therefore recreated upon each activation of 1V0.
