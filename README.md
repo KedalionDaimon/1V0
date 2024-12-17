@@ -21,9 +21,9 @@ gcc -o 1V0 1V0_20200709.c  -lm -Warray-bounds -Wstrict-aliasing
 
 The "reference implementation" is the C version.
 
-2024-12-11:
+2024-12-14:
 
-The so far most portable variant "1V0 Tzetanka IV" has been ported to the ZX Spectrum - see the files 1V0TzIV220zx_20241211b.c and ivo_tz_4.tap, compiled with the following command using z88dk: zcc +zx -clib=new -create-app 1V0TzIV220zx_20241211b.c -o ivo -create-app ; the manual is 1V0TzIV_ZXSpectrum.txt.
+The so far most portable variant "1V0 Tzetanka IV" has been ported to the ZX Spectrum - see the files 1V0TzIV220zx_20241213a.c and ivo_tz_4.tap, compiled with the following command using z88dk: zcc +zx -clib=new -create-app 1V0TzIV220zx_20241213a.c -o ivo -create-app ; the manual is 1V0TzIV_ZXSpectrum.txt.
 
 
 Nino Ivanov
