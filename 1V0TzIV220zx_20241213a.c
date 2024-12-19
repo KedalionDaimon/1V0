@@ -1381,7 +1381,7 @@ while (pc < 220) {
         ((allzeroes == 0) && (anarr[11] < 10) && (datadr3 == 1)) ||
         ((anarr[11] > 9) && (datadr3 == 2)) ||
         ((anarr[11] < 10) && (datadr3 == 3)) ||
-        (((anarr[11] > 10) || (allzeroes == 1)) && (datadr3 == 4)) ||
+        (((anarr[11] > 9) || (allzeroes == 1)) && (datadr3 == 4)) ||
         ((allzeroes == 0) && (datadr3 == 5)) ||
         (datadr3 == 6)) {
 
@@ -1396,7 +1396,7 @@ while (pc < 220) {
           ((allzeroes == 0) && (anarr[11] < 10) && (datadr3 == 8)) ||
           ((anarr[11] > 9) && (datadr3 == 9)) ||
           ((anarr[11] < 10) && (datadr3 == 10)) ||
-          (((anarr[11] > 10) || (allzeroes == 1)) && (datadr3 == 11)) ||
+          (((anarr[11] > 9) || (allzeroes == 1)) && (datadr3 == 11)) ||
           ((allzeroes == 0) && (datadr3 == 12)) ||
           (datadr3 == 13)) {
 
