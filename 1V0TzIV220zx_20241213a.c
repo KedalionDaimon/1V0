@@ -1269,7 +1269,7 @@ if (cmdadr == 0) {
 } else if (cmdadr == 6666) {
   /* clear all data */
 
-  for (i = datadr1; i < 2640; i++) {
+  for (i = 0; i < 2640; i++) {
     datum[i] = 0;
   }
 
