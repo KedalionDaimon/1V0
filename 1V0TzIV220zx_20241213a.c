@@ -160,7 +160,6 @@ uint16_t biszero = 0;
 uint16_t traceon = 0;
 
 uint16_t readint () {
-  uint16_t gcidx = 0;
   uint16_t chargot = 0;
 
   p = 0;
@@ -1608,7 +1607,7 @@ while (pc < 220) {
     chargeb(datadr2);
 
     for (posi = 0; posi < 4; posi++) {
-      anarr[posi] == 0;
+      anarr[posi] = 0;
     }
 
     signbkp = 0;
