@@ -21,13 +21,13 @@ gcc -o 1V0 1V0_20200709.c  -lm -Warray-bounds -Wstrict-aliasing
 
 The "reference implementation" is the C version.
 
-#2024-12-14: NEW 1V0 Tz IV STANDARD
+# 2024-12-14: NEW 1V0 Tz IV STANDARD
 
 .
 
 .
 
-#MANUAL FOR SYSTEMS MARKED "Linux/Windows/Mac/Haiku OS/Termux/iSH/Apple II/C64/CP/M"
+## MANUAL FOR SYSTEMS MARKED "Linux/Windows/Mac/Haiku OS/Termux/iSH/Apple II/C64/CP/M"
 
 .
 
@@ -39,7 +39,7 @@ For all systems of December 2024, commit marked "Linux/Windows/Mac/Haiku OS/Term
 
 .
 
-#ZX Spectrum: ivo_tz_4.tap
+## ZX Spectrum: ivo_tz_4.tap
 
 .
 
@@ -53,7 +53,7 @@ zcc +zx -clib=new -create-app 1V0TzIV220zx_20241213a.c -o ivo -create-app
 
 .
 
-#CP/M: IVOCPM.COM, IVOPX8.COM
+## CP/M: IVOCPM.COM, IVOPX8.COM
 
 .
 
@@ -100,7 +100,7 @@ creates IVOCPM.COM
 
 .
 
-#DOS
+## DOS
 
 .
 
@@ -118,7 +118,7 @@ Transfer to Atari Portfolio using xterm.com with picocom using sx (XMODEM) file 
 
 .
 
-#Commodore 64: ivotz4.d64
+## Commodore 64: ivotz4.d64
 
 .
 
@@ -159,7 +159,7 @@ wine /home/archon/Documents/var/C64/CCS64.exe ivotz4.d64
 
 .
 
-#Apple II, Apple IIe etc: ivtz4aii.dsk
+## Apple II, Apple IIe etc: ivtz4aii.dsk
 
 .
 
@@ -228,7 +228,7 @@ F6 switches fullscreen vs normal; F8 lets you select another monitor.
 
 .
 
-#Linux (Ubuntu 22.04, statically compiled): ivotz4
+## Linux (Ubuntu 22.04, statically compiled): ivotz4
 
 .
 
@@ -242,7 +242,7 @@ gcc -static -o ivotz4 1V0TzIV220zx_20241213a.c
 
 .
 
-#Windows 11: ivtz4win.exe 
+## Windows 11: ivtz4win.exe 
 
 .
 
@@ -256,7 +256,7 @@ tcc -m32 -o ivtz4win.exe 1V0TzIV220zx_20241213a.c
 
 .
 
-#macOS 15.2 Sequoia: ivtz4mac
+## macOS 15.2 Sequoia: ivtz4mac
 
 .
 
@@ -270,7 +270,7 @@ gcc -o ivtz4mac 1V0TzIV220zx_20241213a.c
 
 .
 
-#Haiku OS: ivtz4hai (32bit, dynamically linked)
+## Haiku OS: ivtz4hai (32bit, dynamically linked)
 
 .
 
@@ -284,7 +284,7 @@ gcc -o ivtz4hai 1V0TzIV220zx_20241213a.c
 
 .
 
-#iOS using iSH (the "i Shell"): ivtz4ish
+## iOS using iSH (the "i Shell"): ivtz4ish
 
 .
 
@@ -300,7 +300,7 @@ gcc -static -o ivtz4ish 1V0TzIV220zx_20241213a.c
 
 .
 
-#Android using Termux (aarch64): ivtz4tmx (statically compiled)
+## Android using Termux (aarch64): ivtz4tmx (statically compiled)
 
 .
 
