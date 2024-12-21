@@ -27,13 +27,13 @@ The "reference implementation" is the C version.
 
 .
 
-MANUAL
+MANUAL FOR SYSTEMS MARKED "Linux/Windows/Mac/Haiku OS/Termux/iSH/Apple II/C64/CP/M"
 
 .
 
 .
 
-For all systems of December 2024, refer to 1V0TzIV_ZXSpectrum.txt - it was started for the ZX Spectrum 48K, but applies to all systems.
+For all systems of December 2024, commit marked "Linux/Windows/Mac/Haiku OS/Termux/iSH/Apple II/C64/CP/M", refer to 1V0TzIV_ZXSpectrum.txt - it was started for the ZX Spectrum 48K, but applies to all systems.
 
 .
 
