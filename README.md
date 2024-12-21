@@ -26,4 +26,36 @@ The "reference implementation" is the C version.
 The so far most portable variant "1V0 Tzetanka IV" has been ported to the ZX Spectrum - see the files 1V0TzIV220zx_20241213a.c and ivo_tz_4.tap, compiled with the following command using z88dk: zcc +zx -clib=new -create-app 1V0TzIV220zx_20241213a.c -o ivo -create-app ; the manual is 1V0TzIV_ZXSpectrum.txt.
 
 
+For CP/M, to compile, use:
+
+ack -mcpm -o IVOPX8.COM 1V0TzIV220zx_20241213a_mini.c
+
+and for the Epson PX-8 "Geneva", which can only operate a subset of the above due to space constraints, use:
+
+ack -mcpm -o IVOCPM.COM 1V0TzIV220zx_20241213a.c
+
+(Might need to explicitly use Ctrl-M,Ctrl-J for "Enter".)
+
+(How to transfer via RS232 to the Epson PX-8 Geneva from Linux:
+
+Set up the port on:
+
+sudo stty -F /dev/ttyUSB0 300 cs8 -parenb -cstopb -echo -ixon raw
+
+possibly also:
+
+picocom --baud 300 --parity n --databits 8 --stopbits 1 --flow n --receive-cmd "rz --vv" --send-cmd "sz" --emap delbs --imap del
+bs,crcrlf /dev/ttyUSB0
+
+Ctrl-A,Ctrl-Q
+
+On the Epson PX8: for receipt, use term, and record (while displaying):
+
+dd if=IVOPX8.COM bs=1 | pv -L 20 | dd of=/dev/ttyUSB0 status=progress
+
+where pv slows down the transfer rate to 20 characters per second.)
+
+
+
+
 Nino Ivanov
