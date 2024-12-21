@@ -100,7 +100,7 @@ creates IVOCPM.COM
 
 .
 
-## DOS
+## DOS: IVTZ4DOS.COM
 
 .
 
@@ -112,7 +112,7 @@ Use the Compiler Option Memory Model Tiny.
 
 Use Exe2Bin from FreeDOS to turn EXE into COM.
 
-Transfer to Atari Portfolio using xterm.com with picocom using sx (XMODEM) file transfer protocol.
+Transfer to Atari Portfolio (using DIP DOS 2.11, i.e. very primitive) using xterm.com with picocom using sx (XMODEM) file transfer protocol.
 
 .
 
