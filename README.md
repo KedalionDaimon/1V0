@@ -22,21 +22,27 @@ gcc -o 1V0 1V0_20200709.c  -lm -Warray-bounds -Wstrict-aliasing
 The "reference implementation" is the C version.
 
 2024-12-14:
+
 .
+
 .
-.
+
 MANUAL
+
 .
+
 .
-.
+
 For all systems of December 2024, refer to 1V0TzIV_ZXSpectrum.txt - it was started for the ZX Spectrum 48K, but applies to all systems.
 
 .
+
 .
-.
+
 ZX Spectrum: ivo_tz_4.tap
+
 .
-.
+
 .
 
 The so far most portable variant "1V0 Tzetanka IV" has been ported to the ZX Spectrum - see the files 1V0TzIV220zx_20241213a.c and ivo_tz_4.tap, compiled with the following command using z88dk:
@@ -44,11 +50,13 @@ The so far most portable variant "1V0 Tzetanka IV" has been ported to the ZX Spe
 zcc +zx -clib=new -create-app 1V0TzIV220zx_20241213a.c -o ivo -create-app
 
 .
+
 .
-.
+
 CP/M: IVOCPM.COM, IVOPX8.COM
+
 .
-.
+
 .
 
 For CP/M, to compile, use:
@@ -89,11 +97,13 @@ zcc +cpm -clib=new -create-app 1V0TzIV220zx_20241213a.c -o ivocpm -create-app
 creates IVOCPM.COM
 
 .
+
 .
-.
+
 DOS
+
 .
-.
+
 .
 
 Compile with Turbo C, after replacing uint16_t by unsigned int - see IVTZ4DOS.C .
@@ -105,11 +115,13 @@ Use Exe2Bin from FreeDOS to turn EXE into COM.
 Transfer to Atari Portfolio using xterm.com with picocom using sx (XMODEM) file transfer protocol.
 
 .
+
 .
-.
+
 Commodore 64: ivotz4.d64
+
 .
-.
+
 .
 
 cl65 -O -t c64 1V0TzIV220zx_20241213a.c -o IVOTZ4.PRG
@@ -144,11 +156,13 @@ Runs it immediately:
 wine /home/archon/Documents/var/C64/CCS64.exe ivotz4.d64
 
 .
+
 .
-.
+
 Apple II, Apple IIe etc: ivtz4aii.dsk
+
 .
-.
+
 .
 
 This is a ProDOS disk, 1V0 Tz IV being based in the HELLO file (equivalent to AUTOEXEC.BAT in DOS), and even runs in:
@@ -211,11 +225,13 @@ Select the disk now created, it will just boot straight into 1V0 Tz IV.
 F6 switches fullscreen vs normal; F8 lets you select another monitor.
 
 .
+
 .
-.
+
 Linux (Ubuntu 22.04, statically compiled): ivotz4
+
 .
-.
+
 .
 
 Linux (Ubuntu 22.04), permitting the creation of a static executable:
@@ -223,11 +239,13 @@ Linux (Ubuntu 22.04), permitting the creation of a static executable:
 gcc -static -o ivotz4 1V0TzIV220zx_20241213a.c
 
 .
+
 .
-.
+
 Windows 11: ivtz4win.exe 
+
 .
-.
+
 .
 
 Windows, using Fabrice Bellard's wonderful TCC compiler, but not permitting static compilation:
@@ -235,11 +253,13 @@ Windows, using Fabrice Bellard's wonderful TCC compiler, but not permitting stat
 tcc -m32 -o ivtz4win.exe 1V0TzIV220zx_20241213a.c
 
 .
+
 .
-.
+
 macOS 15.2 Sequoia: ivtz4mac
+
 .
-.
+
 .
 
 macOS, not permitting static compilaton:
@@ -247,11 +267,13 @@ macOS, not permitting static compilaton:
 gcc -o ivtz4mac 1V0TzIV220zx_20241213a.c
 
 .
+
 .
-.
+
 Haiku OS: ivtz4hai (32bit, dynamically linked)
+
 .
-.
+
 .
 
 Haiku OS (Haiku Beta 5), not permitting static compilation (compiled 32 bit on Asus Eee PC 701 4):
@@ -259,11 +281,13 @@ Haiku OS (Haiku Beta 5), not permitting static compilation (compiled 32 bit on A
 gcc -o ivtz4hai 1V0TzIV220zx_20241213a.c
 
 .
+
 .
-.
+
 iOS using iSH (the "i Shell"): ivtz4ish
+
 .
-.
+
 .
 
 iOS, permitting static compilation within the iSH environment:
@@ -273,11 +297,13 @@ gcc -static -o ivtz4ish 1V0TzIV220zx_20241213a.c
 (This is really an i386 Linux environment, and Ubuntu 22.04 runs this just fine, too.)
 
 .
+
 .
-.
+
 Android using Termux (aarch64): ivtz4tmx (statically compiled)
+
 .
-.
+
 .
 
 Android using Termux has been rather involved - compiling a static executable under Termux is allegedly "out of scope" for the Termux developers, at least as of recent online discussions, but can be done as follows:
